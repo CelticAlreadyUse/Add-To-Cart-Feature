@@ -1,0 +1,212 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    list-style-type: none;
+}
+nav{
+    overflow: hidden;   
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    align-items: center;
+    padding-top:80px;
+    padding-bottom: 10px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    transform: 0.4s;
+}
+.nav-items{
+
+    margin-right: 2rem;
+}
+nav .nav-items p{
+    display: flex;
+    align-items: center;
+}
+nav h1{
+    transition: 0.4s;
+    font-size: 5rem;
+    margin-left: 0.8rem;
+}
+
+/* Banners section start */
+
+.banners img{
+    object-position: 80% 40%  ;
+    object-fit:cover;
+    height: 300px;
+    width: 100%;
+}
+
+/* Banners section End */
+
+.search-wrapper{
+    float: left;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.nav-items{
+    gap: 10px;
+    display: flex;
+}
+.nav-items p {
+    cursor: pointer;    
+}
+.search-wrapper input{
+    height: 80%;
+    text-align: center;
+    margin-right: 0.6rem;
+    width: 18rem;
+    font-weight: 800;
+}
+.news-place{
+    margin-top: 220px;
+}
+.hero{
+    justify-content: center;
+    gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    margin-top:4rem;
+    margin-left: 3rem;
+}
+.card-wrapper{
+   
+}
+
+.items{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    color: black;
+}
+.list{
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 60px;
+    margin-top: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    
+}
+.list img{
+    height: 400px;
+}
+
+.productsTitle{
+    margin-top: 0.2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  .addCard{
+    cursor: pointer;
+    border-radius:4px ;
+    background-color: black;
+    padding: 0.4rem;
+    color: white;
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+  }
+/* cart trigggerd */
+.shopCards{
+    color: white;
+    z-index: 50;
+    right: 0;
+    position: fixed;
+    top:0;
+    width: 250px;
+    background-color: rgb(55, 55, 55);
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.shopCards::-webkit-scrollbar{
+   width: 2px;
+}
+.shopCards::-webkit-scrollbar-thumb{
+   background:white;
+   border-radius: 10px;
+}
+body::-webkit-scrollbar{
+    width: 0;
+    color: black;
+}
+.addName{
+    margin-top: 1.2rem;
+    margin-left: 0.4rem;
+    font-weight: 400;
+}
+.hargaTotal  
+{
+    padding: 0.5rem;
+    width: 100%;
+    background-color: orange;
+    position:fixed;
+    bottom: 0;
+}
+.contentWraper{
+    margin-top: 20px;
+    display: flex;
+    color: white;
+}
+
+.btnChange{
+    
+    color: white;
+    gap: 10px;
+    display: flex;
+}
+
+.btnChange button{
+    color: white;
+    background-color: orange;
+    width: 40%;
+    font-size: 1rem;
+}
+#listcard{
+    
+    color: white;
+    margin-left: 0.5rem;
+}
+.addcartImg{
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+#xCart{
+    margin-top: 0.8rem;
+    margin-right:0.8rem ;
+    color: black;
+    cursor: pointer;
+}
+

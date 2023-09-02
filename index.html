@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce   </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Poppins:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav id="navBar">
+        <h1 id="h1Title">Happy Shopping!</h1>
+        <div class="search-wrapper">
+            <p><i data-feather="search"></i></p>
+            <input type="search" placeholder="search your product" >    
+        </div>
+        <div class="nav-items">
+            <p><i id="cart" onclick="openCart()" data-feather="shopping-cart"></i></p>
+            <span class="quantity">0</span>
+
+        </div>
+    </nav>
+    <section  class="news-place">
+        <div class="topBanner">
+            <div class="banners">
+                <img src="./img/furniture-sale-facebook-cover-template_120329-2188.avif">
+            </div>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="list">
+        
+    </div>
+    <divc class="card-wrapper">
+       
+    </div>
+    
+        </div>
+    </section>
+<div class="shopCards" id="shopCart">
+    <p><i id="xCart" onclick="cartOf()" data-feather="x"></i></p>
+     <li id="listcard" class="listCard">
+    </li>
+    <div class="Checout">        
+    </div>
+    <div class="hargaTotal">
+        <span>Total Rp</span>
+        <span class="total"></span>
+    </div>
+</div>
+
+<script src="./App.js"></script>
+    <script>
+        feather.replace();
+      </script>
+ 
+</body>
+</html>
