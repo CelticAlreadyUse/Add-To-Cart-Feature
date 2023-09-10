@@ -18,8 +18,7 @@
         <nav>
             <h1>Welcome</h1>
             <div class="nav-wrapper">
-                <i class="search" data-feather="search"></i>
-                <input type="search" placeholder="Search Your items">
+             
             </div>
             <div class="nav-menu">
                 <i class="cart" data-feather="shopping-bag" onclick="openCart()"></i>
@@ -31,15 +30,48 @@
 
     </div>
     <div  id="cartMenu" class="cartMenu">
-        <i class="xcart" onclick="closeCart()" data-feather="x"></i>
+        <i  onclick="closeCart()" data-feather="x"></i>
         <h1>Cart</h1>
         <ul class="list">
 
         </ul>
         <div class="checkout">
-            <div class="total">Total = <span class="total"></span></div>
+            <div  style="color:white">Total = <span class="total"></span></div>
         </div>
     </div>
+    <footer>
+        <div class="contact">
+            <h1>Contact</h1>
+            <a href="https://wa.me/+6285254375150/?Halobang."><img src="./img/Icon/whatsapp.svg" /></a>
+            <p>https://wa.me/+6285254375150/</p>
+        </div>
+        <div class="Email">
+            <h1>Email</h1>
+            <span><img src="./img/Icon/gmail-4561841_1280.png"/></span>
+            <p>wahyusantosokanisius@gmail.com</p>
+        </div>
+        <div class="Thecnology">
+           <p> This website was created with</p>
+           <div class="items-wrapper">
+           <div class="ThecnologyItems">
+               <span><img src="./img/Icon/feateheicon.png" /></span>
+               <span>feather-icons</span>
+           </div>
+           <div class="ThecnologyItems">
+               <span><img src="./img/Icon/download (1).png" /></span>
+               <span>CSS3</span>
+           </div>
+           <div class="ThecnologyItems">
+               <span><img src="./img/Icon/download (2).png" /></span>
+               <span>Javascript</span>
+           </div>
+           <div class="ThecnologyItems">
+               <span><img src="./img/Icon/download.png" /></span>
+               <span>HTMl</span>
+           </div>
+        </div>
+        </div>
+    </footer>
     <script src="./script.js"></script>
     <script>
         feather.replace();

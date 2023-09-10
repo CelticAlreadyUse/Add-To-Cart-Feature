@@ -35,7 +35,9 @@ nav{
 }
 .cart{
     cursor: pointer;
+    color:white;
 }
+
 .cartMenu{
     overflow-y: scroll;
     z-index: 2;
@@ -60,10 +62,8 @@ nav{
 }
 .total{
 
-    padding: 20px;
-    width: 100%;
+
     color: wheat;
-    background-color: rgba(92, 96, 100, 0.671);
     bottom: 0;
     position: relative;
 }
@@ -115,4 +115,95 @@ nav{
 }
 .gantiCount{
     display: flex;
+}
+.gantiCount button{
+    font-size: 18px;
+    margin: 0 0.5rem;
+}
+.checkout div{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(21, 0, 116);
+    padding: 1rem;   
+}
+.card-wrapper{
+    margin-bottom: 30%;
+    margin-top: 2rem;
+}
+.imgCard{
+    border-radius: 5%;
+    object-fit:scale-down;
+    width:200px;
+    height: 250px;
+}
+
+
+footer{
+    justify-content: space-around;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1rem;
+    height: 14rem;
+    background-color: rgb(190, 96, 62);
+}
+
+footer div{
+    margin-top: 1rem;
+}
+footer p ,footer h1{
+    color: white;
+}
+footer div img{
+    margin-top: 0.8rem;
+}
+.contact{
+    align-items: center;
+    text-align: center;
+}
+.contact img{
+    width: 32px;
+}
+.Email{
+ text-align: center;
+}
+.Email img{
+    margin-top: 0.8rem;
+    width:47px ;
+}
+.Thecnology{
+    height:200px;
+    width: 250px;
+
+}
+.Thecnology p{
+    text-align: center;
+}
+.items-wrapper{
+    column-gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.Thecnology .ThecnologyItems{
+    width: 100px;
+    margin: 5px;
+    height: 24px;
+    display: flex;
+    gap: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+        justify-content: center;
+    
+    
+}
+.Thecnology div span img{
+    width: 24px;
+}
+
+.Thecnology div span{
+    font-size: 12px;
+    color: white;
 }

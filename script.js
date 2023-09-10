@@ -4,6 +4,7 @@ const menuBar= document.getElementById('cartMenu')
 let total = document.querySelector('.total')
 let jumlahCart = document.querySelector('.jumlahCart')
 let listCard = document.querySelector('.listCard')
+const input = document.getElementById('searchInput')
 menuBar.style.display ="none";
 function openCart(){
     if(menuBar.style.display == "none"){
@@ -21,33 +22,37 @@ function closeCart(){
 }
 
 products = [
-    { id:1,Name:'Product Name', Img:'abstract-minimal-kitchen-objects-cutlery_23-2148835349.avif',Price:23000},
-    { id:2,Name:'Product Name', Img:'abstract-minimal-kitchen-objects-cutlery_23-2148835349.avif',Price:23000},
-    { id:3,Name:'Product Name', Img:'abstract-minimal-kitchen-objects-cutlery_23-2148835349.avif',Price:23000},
+    { id:1,Name:'complete tool package', Img:'abstract-minimal-kitchen-objects-cutlery_23-2148835349.avif',Price:23000},
+    { id:2,Name:'Bottle', Img:'front-view-hand-with-surgical-glove-using-disinfectant.jpg',Price:23000},
+    { id:3,Name:'nice flower vase', Img:'green-marinated-olives-black-cup-with-lemon-aside-high-quality-photo.jpg',Price:23000},
+    { id:4,Name:'Honey glass', Img:'top-view-cup-tea-honey-bowl-lemon-slices-blue-table-free-space.jpg',Price:23000},
     { id:4,Name:'Product Name', Img:'abstract-minimal-kitchen-objects-cutlery_23-2148835349.avif',Price:23000},
-    { id:4,Name:'Product Name', Img:'abstract-minimal-kitchen-objects-cutlery_23-2148835349.avif',Price:23000},
-    { id:4,Name:'Product Name', Img:'abstract-minimal-kitchen-objects-cutlery_23-2148835349.avif',Price:23000},
+    { id:4,Name:'Honey glass', Img:'top-view-cup-tea-honey-bowl-lemon-slices-blue-table-free-space.jpg',Price:23000},
+    { id:4,Name:'Make-up kit', Img:'high-angle-foundation-containers-arrangement.jpg',Price:23000},
+    { id:4,Name:'Honey glass', Img:'top-view-cup-tea-honey-bowl-lemon-slices-blue-table-free-space.jpg',Price:23000},
+    { id:4,Name:'Make-up kit', Img:'high-angle-foundation-containers-arrangement.jpg',Price:23000},
+    { id:4,Name:'Honey glass', Img:'top-view-cup-tea-honey-bowl-lemon-slices-blue-table-free-space.jpg',Price:23000},
 ];
 let lists = [];
 function initApp(){
-    products.forEach((value,key)=>{
+    products.forEach((nilai,isi)=>{
         let NewDiv = document.createElement('div');
         NewDiv.classList.add('item')
         NewDiv.innerHTML = `
-        <img src="img/${value.Img}">
-        <div class="productName">${value.Name}</div>
-        <div class="productPrice">${value.Price.toLocaleString()}</div>
-        <button onclick="addToCard(${key})">Add To Cart<?button>
+        <img class="imgCard" src="img/${nilai.Img}">
+        <div class="productName">${nilai.Name}</div>
+        <div class="productPrice">${nilai.Price.toLocaleString()}</div>
+        <button onclick="addToCard(${isi})">Add To Cart<?button>
         `;
         listCard.appendChild(NewDiv);
     })
 }
 initApp();
 
-function addToCard(key){
-    if(list[key]== null){
-        lists[key] = JSON.parse(JSON.stringify(products[key]));
-        lists[key].jumlahCart =1;
+function addToCard(isi){
+    if(list[isi]== null){
+        lists[isi] = JSON.parse(JSON.stringify(products[isi]));
+        lists[isi].jumlahCart =1;
     }
     reloadCard();
 }
@@ -55,34 +60,45 @@ function reloadCard(){
     list.innerHTML ='';
     let count = 0;
     let hargaTotal = 0;
-    lists.forEach((value, key)=>{
-        hargaTotal = hargaTotal +value.Price;
-        count = count + value.jumlahCart;
-        if(value != null){
+    lists.forEach((nilai, isi)=>{
+        hargaTotal = hargaTotal +nilai.Price;
+        count = count + nilai.jumlahCart;
+        if(nilai != null){
             let NewDiv =document.createElement('li');
             NewDiv.innerHTML =`
-            <div><img src="img/${value.Img}"></img></div>
-            <div class="cartName">${value.Name}</div>
-            <div >${value.Price.toLocaleString()}</div>
+            <div class="card-wrapper">
+            <div><img src="img/${nilai.Img}"></img></div>
+            <div class="cartName">${nilai.Name}</div>
+            <div >${nilai.Price.toLocaleString()}</div>
             <div class="gantiCount">  
-            <button onclick ="gantiJumlahCart(${key},${value.jumlahCart-1})">-</button>
-            <div class="count">${value.jumlahCart}</div>
-            <button onclick ="gantiJumlahCart(${key},${value.jumlahCart+1})">+</button>
+            <button onclick ="removeItem(${isi})">X</button>
+            <button onclick ="gantiJumlahCart(${isi},${nilai.jumlahCart -1})">-</button>
+            <div class="count">${nilai.jumlahCart}</div>
+            <button onclick ="gantiJumlahCart(${isi},${nilai.jumlahCart+1})">+</button>
+            </div>
             </div>
             `;
             list.appendChild(NewDiv)
         }
+        
     })
     total.innerText = hargaTotal.toLocaleString();
     jumlahCart.innerText = count;
 }
-
-function gantiJumlahCart(key , jumlahCart){
+function removeItem(isi){
+    delete lists[isi];
+    reloadCard()
+}
+function gantiJumlahCart(isi , jumlahCart){
     if(jumlahCart == 0){
-        delete lists[key];
+        delete lists[isi];
     }else{
-        lists[key].jumlahCart = jumlahCart;
-        lists[key].Price = jumlahCart * products[key].Price
+        lists[isi].jumlahCart = jumlahCart;
+        lists[isi].Price = jumlahCart * products[isi].Price
     }
     reloadCard()
 }
+
+input.addEventListener("keyup",(nilai , trigger) =>{
+    const searchTearm = trigger.target.value
+})
